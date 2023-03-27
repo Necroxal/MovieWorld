@@ -155,7 +155,22 @@ input[type="button"]{
 
 .footer{
     grid-area: footer;
-    border: 5px solid black;
-    background: rgb(255, 181, 192);
+    
+    background: #d1defa;
+    color: #454545;
+    border-top: 1px solid white;
+    text-align: left;
+    line-height: 68px;
+    padding-left: 25px;
 }
 
+@media (max-width: 1000px) {
+    .content{
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-movie{
+        width: 80%;
+    }
+}

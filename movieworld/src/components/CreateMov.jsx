@@ -22,12 +22,28 @@ export const CreateMov = () => {
       title,
       description
     };
-
+    //save state
     setMovieState(movie);
-    console.log(movieState);
-
-    console.log(movie)
+    //Save  local storage
+    saveOnStorage(movie);
   }
+
+  const saveOnStorage = movie =>{
+    //get elements local storahe
+    let items = JSON.parse(localStorage.getItem("movies"));
+
+    //Check if it is an array
+    if(Array.isArray(items)){
+        items.push(movie);
+    }else{
+      items = [movie];
+    }
+    //Save in the local Storage
+    localStorage.setItem("movies", JSON.stringify(items));
+    //Return an object
+    return movie;
+  }
+  
   return (
      <div className="add">
             <h3 className="title">{title}</h3>

@@ -114,6 +114,10 @@ input[type="button"]{
   cursor: pointer;
   transition: all 300ms;
 }
+.item-movie .edit{
+  margin-right: 7px;
+}
+
 .item-movie .edit:hover{
   background: #c18847;
 }

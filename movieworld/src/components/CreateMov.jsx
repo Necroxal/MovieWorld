@@ -2,12 +2,13 @@ import React, { useState } from 'react'
 import { saveOnStorage } from '../helper/SaveOnStorage';
 
 export const CreateMov = () => {
-  const title = 'Add Movie';
+  const titleComponent = 'Add Movie';
 
   const [movieState,setMovieState] = useState({
     title: '',
     description: ''
-  })
+  });
+  const  {title, description} = movieState;
 
   const getFormValues = e =>{
     e.preventDefault(); 
@@ -19,23 +20,21 @@ export const CreateMov = () => {
 
     //Create Object and save
     let movie = {
-      id: new Date().getTime,
+      id: new Date().getTime(),
       title,
       description
     };
     //save state
     setMovieState(movie);
     //Save  local storage
-    saveOnStorage('movies',movie);
+    saveOnStorage("movies",movie);
   }
 
-  
-  
   return (
      <div className="add">
-            <h3 className="title">{title}</h3>
+            <h3 className="title">{titleComponent}</h3>
             <strong>
-                {(movieState.title && movieState.description) && "the movie was created: "+ movieState.title}
+                {(title && description) && "the movie was created: "+ title}
             </strong>
             <form onSubmit={getFormValues}>
                 <input type="text" 

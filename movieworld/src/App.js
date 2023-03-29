@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import './App.css';
 import { CreateMov } from './components/CreateMov';
 import { ListMov } from './components/ListMov';
 import { Search } from './components/Search';
 
-function App() {
+function App() { 
+  const [listState, setlistState] = useState([]);
+
   return (
     <div className="layout">
    
@@ -23,11 +26,11 @@ function App() {
         </ul>
     </nav>
     <section className="content">
-       <ListMov/>
+       <ListMov listState={listState} setlistState={setlistState}/>
     </section>
     <aside className="side">
         <Search/>
-        <CreateMov/>
+        <CreateMov setlistState={setlistState}/>
     </aside>
     <footer className="footer">
         &copy; German Rangel

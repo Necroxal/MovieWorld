@@ -1,0 +1,27 @@
+textarea,
+input[type="text"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #f6f7f9;
+    color: #454545;
+    width: 80%;
+    opacity: 4;
+    outline: 0;
+    border-color: transparent;
+}
+
+.edit_form {
+    border-radius: 10px;
+}
+.edit_form > hr{
+    height: 1px;
+    background-color: transparent;
+    box-shadow: 0px 0px 6px #ddd;
+}
+.edit_form>.title {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}

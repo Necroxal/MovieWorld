@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react'
-import { Edit } from './Edit';
+import { Edit } from './Edit/Edit.jsx';
 
 export const ListMov = ({listState,setlistState}) => {
 

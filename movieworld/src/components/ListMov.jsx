@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 
 export const ListMov = ({listState,setlistState}) => {
 
     useEffect(()=>{
       getMovies();
   },[]);
-
-  //const [listState, setlistState] = useState([]);
 
   const getMovies = () =>{
       let movies = JSON.parse(localStorage.getItem("movies"));

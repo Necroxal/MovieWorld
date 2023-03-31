@@ -39,7 +39,10 @@ export const ListMov = ({listState,setlistState}) => {
                 <button className="delete" onClick={()=>deleteMovie(movie.id)}>Delete</button>
                 {/* Form to edit*/}
                 {edit === movie.id && (
-                  <Edit/>
+                  <Edit movie ={movie}
+                  getMovies={getMovies}
+                  setEdit={setEdit}
+                  setlistState={setlistState}/>
             )}
             </article>
           );

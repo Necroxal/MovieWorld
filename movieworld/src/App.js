@@ -29,7 +29,7 @@ function App() {
        <ListMov listState={listState} setlistState={setlistState}/>
     </section>
     <aside className="side">
-        <Search/>
+        <Search listState={listState} setlistState={setlistState}/>
         <CreateMov setlistState={setlistState}/>
     </aside>
     <footer className="footer">
